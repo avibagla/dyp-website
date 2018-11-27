@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "foundation-sites": "^6.5.1",
+    "gh-pages": "^2.0.1",
     "jquery": "^3.3.1",
     "node-sass": "^4.10.0",
     "normalize.css": "^8.0.1",
@@ -12,6 +13,8 @@
     "react-scripts": "2.1.1"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -20,6 +23,7 @@
   "eslintConfig": {
     "extends": "react-app"
   },
+  "homepage": "https://www.avibagla.com/dyp-website",
   "browserslist": [
     ">0.2%",
     "not dead",
