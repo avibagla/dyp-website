@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 // import 'foundation-sites/dist/css/foundation.min.css';
 import logo from './logo.svg';
+import sample from './media/sample.mp3';
 import './App.scss';
 // import $ from 'jquery';
 
@@ -61,6 +62,25 @@ class ComingSoon extends Component {
   }
 }
 
+class ListenToSample extends Component {
+  render(){
+
+    return(
+      <div className="row">
+        <div className="sample">
+          <h4 className="sample coming-soon">Listen to the sample in the meantime</h4>
+          <div className="sample">
+            <audio controls>
+                <source src={sample} type="audio/mpeg"/>
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
+
 
 
 
@@ -71,6 +91,7 @@ class App extends Component {
       <div>
         <Header/>
         <ComingSoon/>
+        <ListenToSample/>
       </div>
     );
   }
