@@ -8,12 +8,20 @@ $text-weight: 400;
 
 * {
   margin: 0;
+  
+}
+
+h2, h3, h4, h5, h6, p, span, button {
+  font-family: $text-font;
 }
 
 .heading {
   text-align: center;
-  font-family: $title-font;
-  font-weight: $title-weight;
+
+  h2{
+    font-family: $title-font;
+    font-weight: $title-weight;
+  }
   color: white;
   font-size: 1.8em;
   padding-top: 30px;
@@ -22,6 +30,24 @@ $text-weight: 400;
 
 .logo-container {
   position:relative;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  div {
+    padding: 0px 20px;
+  }
+}
+
+.button {
+    background-color: white;
+    border: solid;
+    color: black;
+    padding: 8px 20px;
+    font-family: $text-font;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 16px;
 }
 
 .top-shape-heading-rectangle {
@@ -41,8 +67,10 @@ $text-weight: 400;
   z-index: -100;
 }
 
-.podcast-logo {
-
+.coming-soon {
+  padding: 20px;
+  font-size: 1.5em;
+  text-align:center;
 }
 
 .podcast-logo-image{

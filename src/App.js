@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
+// import 'foundation-sites/dist/css/foundation.min.css';
 import logo from './logo.svg';
 import './App.scss';
-import $ from 'jquery';
-import 'foundation-sites'
+// import $ from 'jquery';
 
 class FoundationSetup extends Component {
   render(){
@@ -29,52 +29,51 @@ class Header extends Component {
           </FoundationSetup>
         </div>
         <div className="logo-container">
-          <FoundationSetup width="4">
+           <div className="podcast-button-container">
+            <button className="button apple-podcasts">Apple Podcasts</button>
+          </div>
+          <div className="image-container">
               <div className="podcast-logo">
                 <img src={logo} className="podcast-logo-image" alt="podcast logo"/>
               </div>
-          </FoundationSetup>
+          </div>
+          <div className="podcast-button-container">
+              <button className="button spotify-podcasts">Spotify Podcasts</button>
+          </div>
           <div className="top-shape-heading-triangle">
           </div>
         </div>
+       
         
       </div>
       );
   }
 }
 
-class App extends Component {
-  componentDidMount() {
-    $(document).foundation();
+class ComingSoon extends Component {
+  render(){
+    
+    return(
+      <FoundationSetup width="4">
+        <h3 className="coming-soon"> A new podcast, coming soon! </h3>
+      </FoundationSetup>
+    );
   }
+}
+
+
+
+
+class App extends Component {
 
   render(){
     return(
-      <Header/>
+      <div>
+        <Header/>
+        <ComingSoon/>
+      </div>
     );
   }
 }
 
 export default App;
-
-
-  {/*render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }*/}
