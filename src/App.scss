@@ -1,0 +1,84 @@
+
+$primary-yellow: #edd43e;
+$primary-blue: #14c5cc;
+$title-font: sofia-pro-soft, sans-serif;
+$title-weight: 700;
+$text-font: sofia-pro, sans-serif;
+$text-weight: 400;
+
+* {
+  margin: 0;
+}
+
+.heading {
+  text-align: center;
+  font-family: $title-font;
+  font-weight: $title-weight;
+  color: white;
+  font-size: 1.8em;
+  padding-top: 30px;
+
+}
+
+.logo-container {
+  position:relative;
+}
+
+.top-shape-heading-rectangle {
+  background: $primary-blue;
+  width: 100vw;
+  height: 150px;
+}
+
+.top-shape-heading-triangle {
+  position:absolute;
+  top:0;
+  right:0;
+  width: 0;
+  height: 0;
+  border-top: 150px solid $primary-blue;
+  border-left: 100vw solid transparent;
+  z-index: -100;
+}
+
+.podcast-logo {
+
+}
+
+.podcast-logo-image{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+}
+
+
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

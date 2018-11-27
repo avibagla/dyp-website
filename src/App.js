@@ -1,9 +1,64 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import $ from 'jquery';
+import 'foundation-sites'
+
+class FoundationSetup extends Component {
+  render(){
+    return (
+      <div className="row">
+          <div className={"small-"+(this.props.width ? this.props.width : "11") +" cell small-centered "}> 
+            {this.props.children}
+          </div>
+        </div>
+      )
+  }
+}
+
+class Header extends Component {
+  render(){
+
+    return(
+      <div className="top">
+        <div className="top-shape-heading-rectangle">
+          <FoundationSetup>
+            <div className="heading">
+              <h2>Disappointing Your Parents</h2>
+            </div>
+          </FoundationSetup>
+        </div>
+        <div className="logo-container">
+          <FoundationSetup width="4">
+              <div className="podcast-logo">
+                <img src={logo} className="podcast-logo-image" alt="podcast logo"/>
+              </div>
+          </FoundationSetup>
+          <div className="top-shape-heading-triangle">
+          </div>
+        </div>
+        
+      </div>
+      );
+  }
+}
 
 class App extends Component {
-  render() {
+  componentDidMount() {
+    $(document).foundation();
+  }
+
+  render(){
+    return(
+      <Header/>
+    );
+  }
+}
+
+export default App;
+
+
+  {/*render() {
     return (
       <div className="App">
         <header className="App-header">
@@ -22,7 +77,4 @@ class App extends Component {
         </header>
       </div>
     );
-  }
-}
-
-export default App;
+  }*/}
