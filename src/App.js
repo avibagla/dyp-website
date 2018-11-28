@@ -31,7 +31,7 @@ class Header extends Component {
         </div>
         <div className="logo-container">
            <div className="flex podcast-button-container">
-            <button className="button apple-podcasts">Apple Podcasts</button>
+            <button className="button apple-podcasts">Apple</button>
           </div>
           <div className="flex image-container">
               <div className="podcast-logo">
@@ -39,7 +39,7 @@ class Header extends Component {
               </div>
           </div>
           <div className="flex podcast-button-container">
-              <button className="button spotify-podcasts">Spotify Podcasts</button>
+              <button className="button spotify-podcasts">Spotify</button>
           </div>
           <div className="top-shape-heading-triangle">
           </div>
