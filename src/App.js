@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-// import 'foundation-sites/dist/css/foundation.min.css';
+import 'foundation-sites/dist/css/foundation.min.css';
 import logo from './logo.svg';
 import sample from './media/sample.mp3';
 import './App.scss';
-// import $ from 'jquery';
+import $ from 'jquery';
 
 class FoundationSetup extends Component {
   render(){
@@ -30,15 +30,15 @@ class Header extends Component {
           </FoundationSetup>
         </div>
         <div className="logo-container">
-           <div className="podcast-button-container">
+           <div className="flex podcast-button-container">
             <button className="button apple-podcasts">Apple Podcasts</button>
           </div>
-          <div className="image-container">
+          <div className="flex image-container">
               <div className="podcast-logo">
                 <img src={logo} className="podcast-logo-image" alt="podcast logo"/>
               </div>
           </div>
-          <div className="podcast-button-container">
+          <div className="flex podcast-button-container">
               <button className="button spotify-podcasts">Spotify Podcasts</button>
           </div>
           <div className="top-shape-heading-triangle">
