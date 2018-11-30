@@ -15,6 +15,8 @@ h2, h3, h4, h5, h6, p, span, button {
   font-family: $text-font;
 }
 
+
+
 .heading {
   text-align: center;
 
@@ -28,7 +30,11 @@ h2, h3, h4, h5, h6, p, span, button {
   padding-top: 30px;
 
 }
-
+.mission {
+  padding: 20px;
+  max-width: 1024px;
+  margin:auto;
+}
 .logo-container {
   position:relative;
   display: flex;
@@ -69,9 +75,10 @@ h2, h3, h4, h5, h6, p, span, button {
 }
 
 .coming-soon {
-  padding: 20px;
+  padding-top: 20px;
   font-size: 1.5em;
   text-align:center;
+  font-style: italic;
 }
 
 
@@ -89,9 +96,16 @@ h2, h3, h4, h5, h6, p, span, button {
   display: table;
   font-size: 1.2em;
   font-weight: 100;
+  padding: 10px 0px;
   audio {
     margin: auto;
   }
+}
+
+.hosts {
+  text-align: center;
+  color:#aaa;
+  font-size: 1.2em;
 }
 
 .App-logo {

@@ -9,7 +9,7 @@ class FoundationSetup extends Component {
   render(){
     return (
       <div className="row">
-          <div className={"small-"+(this.props.width ? this.props.width : "11") +" cell small-centered "}> 
+          <div className={"small-"+(this.props.width ? this.props.width : "11") +" cell small-centered columns"}> 
             {this.props.children}
           </div>
         </div>
@@ -51,12 +51,26 @@ class Header extends Component {
   }
 }
 
+class Description extends Component {
+  render(){
+    return(
+      <div>
+        <p className="mission">Few things hurt more than disappointing your parents - with one look from Amma, your heart sinks and you feel like you’re a failure. As minorities living with a culture clash between our parents and our society, it’s a chaos we know all too well.  “Disappointing Your Parents” breaks down the different cultural moments where we experience that chaos, and how we attempt to reconcile these complex feelings in our daily lives. <br/><br/>
+Look, relationships with our elders are overlaid with decades of tradition and culture shock, leaving many people feeling like they are constantly drowning - we’re hoping to help folks like us navigate the lonely storm that is disappointing your parents.
+        </p>
+        <h5 className="hosts">Hosted by <a href="//www.avibagla.com">Avi Bagla</a> and <a href="//vedantswarup.com">Vedant Swarup</a></h5>
+
+      </div>
+      );
+  }
+}
+
 class ComingSoon extends Component {
   render(){
     
     return(
       <FoundationSetup width="4">
-        <h3 className="coming-soon"> A new podcast, coming soon! </h3>
+        <h3 className="coming-soon"> COMING SOON! </h3>
       </FoundationSetup>
     );
   }
@@ -68,7 +82,7 @@ class ListenToSample extends Component {
     return(
       <div className="row">
         <div className="sample">
-          <h4 className="sample coming-soon">Listen to the sample in the meantime</h4>
+          <h4 className="sample">Listen to the sample for a taste</h4>
           <div className="sample">
             <audio controls>
                 <source src={sample} type="audio/mpeg"/>
@@ -91,6 +105,8 @@ class App extends Component {
       <div>
         <Header/>
         <ComingSoon/>
+        <Description/>
+        
         <ListenToSample/>
       </div>
     );
